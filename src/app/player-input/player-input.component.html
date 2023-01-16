@@ -1,0 +1,5 @@
+<h1>Enter player name</h1>
+<input type="text" [(ngModel)]="name" />
+<button type="button" (click)="resetName()">Reset name</button>
+<h3 *ngIf="name">Welcome {{ name }}!!</h3>
+<h2>Choose your pokemon</h2>

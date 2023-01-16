@@ -1,0 +1,23 @@
+* {
+  text-align: center;
+}
+h1 {
+  margin-bottom: 1rem;
+}
+button {
+  background-color: rgba(255, 255, 0, 0.963);
+  padding:3px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgb(235, 235, 104);
+
+}
+h3 {
+  color : red
+}
+input {
+  margin-bottom: 1rem;
+  margin-right: 5px;
+  padding: 2.5px;
+}
