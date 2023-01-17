@@ -1,26 +1,43 @@
 <div class="container">
-  <div class="card">
-    <img
-      src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png"
-      alt=""
-    />
-    <p>NAME: Gengar</p>
-    <p class="badge-poison">Poison</p>
+  <div *ngFor="let pokemon of pokemons" class="card">
+    <img [src]="pokemon.img_url" alt="" />
+    <p class="name">NAME: {{ pokemon.name }}</p>
+
+    <div [ngSwitch]="pokemon.type">
+      <div *ngSwitchCase="'dragon'">
+        <p class="badge-dragon">{{ pokemon.type }}</p>
+      </div>
+      <div *ngSwitchCase="'electric'">
+        <p class="badge-eletric">{{ pokemon.type }}</p>
+      </div>
+      <div *ngSwitchCase="'fire'">
+        <p class="badge-fire">{{ pokemon.type }}</p>
+      </div>
+      <div *ngSwitchCase="'water'">
+        <p class="badge-water">{{ pokemon.type }}</p>
+      </div>
+      <div *ngSwitchCase="'poison'">
+        <p class="badge-poison">{{ pokemon.type }}</p>
+      </div>
+      <div *ngSwitchCase="'psychic'">
+        <p class="badge-psychic">{{ pokemon.type }}</p>
+      </div>
+      <div *ngSwitchCase="'bug'">
+        <p class="badge-bug">{{ pokemon.type }}</p>
+      </div>
+      <div *ngSwitchCase="'grass'">
+        <p class="badge-grass">{{ pokemon.type }}</p>
+      </div>
+      <div *ngSwitchDefault>
+        <p class="badge-normal">{{ pokemon.type }}</p>
+      </div>
+    </div>
 
     <div class="stats">
-      <p [style]="{ color: 'red' }">HP:23</p>
-      <p [style]="{ color: '#FF5000' }">attack:23</p>
-      <p [style]="{ color: '#00CCCC' }">speed:23</p>
-      <p [style]="{ color: 'gray' }">defense:23</p>
+      <p [style]="{ color: 'red' }">HP: {{ pokemon.hp }}</p>
+      <p [style]="{ color: '#FF5000' }">attack: {{ pokemon.attack }}</p>
+      <p [style]="{ color: '#00CCCC' }">speed: {{ pokemon.speed }}</p>
+      <p [style]="{ color: 'gray' }">defense: {{ pokemon.defense }}</p>
     </div>
   </div>
-  <div class="card"></div>
-  <div class="card"></div>
-  <div class="card"></div>
-  <div class="card"></div>
-  <div class="card"></div>
-  <div class="card"></div>
-  <div class="card"></div>
-  <div class="card"></div>
-  <div class="card"></div>
 </div>
