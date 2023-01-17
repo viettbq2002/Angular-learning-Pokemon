@@ -5,6 +5,7 @@ An Project for learning basic **Angular 15**
 ## Description
 An mini angular application display my top 20 favorite pokemon include pokemon name type, stats and image. 
 Pokemon data was based on [PokeAPI](https://pokeapi.co/) and clone with [MockApi.io](https://mockapi.io/). 
+
 [My top 20 Pokemon API link](https://63c5044bf3a73b34784bf392.mockapi.io/api/v1/Pokemon).
 
 
