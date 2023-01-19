@@ -3,7 +3,7 @@
     <img [src]="pokemon.img_url" alt="" />
     <p class="name">NAME: {{ pokemon.name }}</p>
 
-    <div [ngSwitch]="pokemon.type">
+    <ng-container [ngSwitch]="pokemon.type">
       <div *ngSwitchCase="'dragon'">
         <p class="badge-dragon">{{ pokemon.type }}</p>
       </div>
@@ -31,7 +31,7 @@
       <div *ngSwitchDefault>
         <p class="badge-normal">{{ pokemon.type }}</p>
       </div>
-    </div>
+    </ng-container>
 
     <div class="stats">
       <p [style]="{ color: 'red' }">HP: {{ pokemon.hp }}</p>

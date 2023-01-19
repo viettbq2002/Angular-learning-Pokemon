@@ -5,11 +5,18 @@
   align-items: center;
   height:100%;
   flex-direction: column;
-  padding-top: 4rem;
+  margin-top: 1rem;
 }
+.github-link {
+  text-align: left;
+  font-size: 1.72rem;
+  padding: 0.8rem 1.7rem;
 
+
+}
 @media (max-width: 768px) {
   .main {
     padding-top: 2rem;
   }
 }
+

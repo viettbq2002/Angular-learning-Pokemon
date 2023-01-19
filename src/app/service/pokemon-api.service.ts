@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, catchError } from 'rxjs';
+import { Observable, of, tap } from 'rxjs';
 import { Pokemon } from '../interface/pokemon';
 
 @Injectable({
@@ -14,6 +14,12 @@ export class PokemonApiService {
   };
   public getPokemon(): Observable<Pokemon[]> {
     return this.http.get<Pokemon[]>(this.api_url, this.HttpOptions);
+  }
+  public serachPokemon(searchString: string): Observable<Pokemon[]> {
+    if (!searchString.trim()) {
+      return of([]);
+    }
+    return this.http.get<Pokemon[]>(`${this.api_url}/?name=${searchString}`);
   }
 
   constructor(private http: HttpClient) {}
